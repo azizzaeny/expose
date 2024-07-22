@@ -55,4 +55,4 @@ evaluate
 
 ### Changes
  - [1.0.0] add `expose` `define` and `evaluate`
-
+ - [1.0.1] fix `map`,`filter` is not defined, seperate @zaeny/clojure.core

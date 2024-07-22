@@ -1,3 +1,19 @@
+var map = (...args) =>{
+  let [fn, arr] = args;
+  if (args.length === 1) {
+    return coll => map(fn, coll);
+  }
+  return arr.map(fn);
+}
+
+var filter = (...args) =>{
+  let [predicate, arr] = args;
+  if (args.length === 1) {
+    return coll => filter(predicate, coll);
+  }
+  return arr.filter(predicate);
+}
+
 var fs = require('fs');
 
 var define = module => Object.assign(global, require(module));
